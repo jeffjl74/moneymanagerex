@@ -10,7 +10,7 @@
  *      @brief
  *
  *      Revision History:
- *          AUTO GENERATED at 2015-01-25 15:29:25.126684.
+ *          AUTO GENERATED at 2015-01-25 22:51:53.997000.
  *          DO NOT EDIT!
  */
 //=============================================================================
@@ -454,6 +454,42 @@ struct SorterByHISTID
     }
 };
 
+struct SorterByID
+{ 
+    template<class DATA>
+    bool operator()(const DATA& x, const DATA& y)
+    {
+        return x.ID < y.ID;
+    }
+};
+
+struct SorterByID_CHECKINGACCOUNT
+{ 
+    template<class DATA>
+    bool operator()(const DATA& x, const DATA& y)
+    {
+        return x.ID_CHECKINGACCOUNT < y.ID_CHECKINGACCOUNT;
+    }
+};
+
+struct SorterByID_CURRENCY
+{ 
+    template<class DATA>
+    bool operator()(const DATA& x, const DATA& y)
+    {
+        return x.ID_CURRENCY < y.ID_CURRENCY;
+    }
+};
+
+struct SorterByID_TABLERECORD
+{ 
+    template<class DATA>
+    bool operator()(const DATA& x, const DATA& y)
+    {
+        return x.ID_TABLERECORD < y.ID_TABLERECORD;
+    }
+};
+
 struct SorterByINFOID
 { 
     template<class DATA>
@@ -778,6 +814,15 @@ struct SorterBySYMBOL
     }
 };
 
+struct SorterByTABLETYPE
+{ 
+    template<class DATA>
+    bool operator()(const DATA& x, const DATA& y)
+    {
+        return x.TABLETYPE < y.TABLETYPE;
+    }
+};
+
 struct SorterByTEMPLATECONTENT
 { 
     template<class DATA>
@@ -838,6 +883,15 @@ struct SorterByTRANSDATE
     bool operator()(const DATA& x, const DATA& y)
     {
         return x.TRANSDATE < y.TRANSDATE;
+    }
+};
+
+struct SorterByTRANSFER
+{ 
+    template<class DATA>
+    bool operator()(const DATA& x, const DATA& y)
+    {
+        return x.TRANSFER < y.TRANSFER;
     }
 };
 
